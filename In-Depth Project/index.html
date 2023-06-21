@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>In-Depth</title>
+  </head>
+  <body>
+    <main>
+      <!--Turn-->
+      <div class="grid">
+        <div class="turn" data-id="turn">
+          <i class="fa-solid fa-x yellow"></i>
+          <p class="yellow">Player 1, you're up!</p>
+        </div>
+
+        <!--DropDown Menu-->
+        <div class="menu" data-id="menu">
+          <button class="menu-btn" data-id="menu-btn">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="items border hidden" data-id="menu-items">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-round-btn">New Round</button>
+          </div>
+        </div>
+
+        <!--Game Board-->
+        <div data-id="square" class="square shadow" id="1"></div>
+        <div data-id="square" class="square shadow" id="2"></div>
+        <div data-id="square" class="square shadow" id="3"></div>
+        <div data-id="square" class="square shadow" id="4"></div>
+        <div data-id="square" class="square shadow" id="5"></div>
+        <div data-id="square" class="square shadow" id="6"></div>
+        <div data-id="square" class="square shadow" id="7"></div>
+        <div data-id="square" class="square shadow" id="8"></div>
+        <div data-id="square" class="square shadow" id="9"></div>
+
+        <!--Score Board-->
+        <div class="score shadow" style="background-color: yellow">
+          <p>Player 1</p>
+          <span data-id="p1-wins">0 Wins</span>
+        </div>
+        <div class="score shadow" style="background-color: lightgrey">
+          <p>Ties</p>
+          <span data-id="ties">0</span>
+        </div>
+        <div class="score shadow" style="background-color: turquoise">
+          <p>Player 2</p>
+          <span data-id="p2-wins">0 Wins</span>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Original project by @Ivan00Sto</p>
+
+      <p>Refactored by Julian Morales</p>
+    </footer>
+    <!--Modal that opens when game ends-->
+    <div class="modal hidden" data-id="modal">
+      <div class="modal-contents">
+        <p data-id="modal-text">Player 1 Wins</p>
+        <button data-id="modal-btn">Play again</button>
+      </div>
+    </div>
+    <script src="./JavaScript/main.js" type="module"></script>
+  </body>
+</html>
